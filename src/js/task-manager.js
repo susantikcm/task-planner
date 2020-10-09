@@ -233,7 +233,7 @@ const createTaskHtml = (task) => {
     
     const taskItemHtml = 
     `<li id="${task.id}" class="list-group-item list-group-item-action bg-transparent shadow mb-2 mb-md-4">
-        <div class="card border-${taskColor.color} text-${taskColor.color}" style="background-color:${taskColor.rgbaColor}">
+        <div class="card border-${taskColor.color} text-dark" style="background-color:${taskColor.rgbaColor}">
             <div class="card-header bg-transparent pt-1 pb-0 py-md-3">
                 <div class="status d-flex justify-content-between py-0">
                     <p class="status">${task.status}</p>                
