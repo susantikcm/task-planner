@@ -79,10 +79,11 @@ let TaskManager = class  {
         task.id = this.currentId;
         this.currentId++;
         
-        if(!this.tasks)
+        if(!this.tasks) 
             this.tasks = [];
 
         this.tasks.push(task);
+
         this.saveTask();
     }
 
@@ -94,8 +95,8 @@ let TaskManager = class  {
     getAllTasks = () => {
         this.tasks = JSON.parse(localStorage.getItem('TaskList'));
         if(this.tasks !== null && this.tasks !== undefined ) {
-            const lastItem = this.tasks.length;
-            this.currentId = lastItem ? lastItem.id+1 : 1;
+            const lastId = this.tasks[this.tasks.length-1].id;
+            this.currentId = lastId > 0 ? lastId + 1 : 1;
         }
     }
 
