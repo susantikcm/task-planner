@@ -1,0 +1,17 @@
+body {
+    text-shadow: 1px 1px 1px darkslategrey;
+    background-image: linear-gradient(160deg,
+        rgba(241, 156, 187, 0.6) 15%, 
+        rgba(135, 206, 235, 0.6) 25%, 
+        rgba(255, 191, 0, 0.6) 30%,
+        rgba(80, 220, 100, 0.6) 45%, 
+        rgba(216, 191, 216, 0.6) 65%);
+    min-height: 100vw;
+    color: teal;
+}
+
+.list-group-item {
+    border: none;
+    padding: 0px;
+    margin: 5px 0px;
+}

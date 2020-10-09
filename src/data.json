@@ -1,0 +1,42 @@
+[
+    {
+        "id": "todo1",
+        "name": "Task 1",
+        "description": "Description 1",
+        "assignedTo": "Susanti",
+        "dueDate": "2020-09-30",
+        "status": "To Do"
+    },
+    {
+        "id": "todo2",
+        "name": "Task 2",
+        "description": "Description 2",
+        "assignedTo": "Nick",
+        "dueDate": "2020-10-20",
+        "status": "In Progress"
+    },
+    {
+        "id": "todo3",
+        "name": "Task 3",
+        "description": "Description 3",
+        "assignedTo": "Robin",
+        "dueDate": "2020-11-12",
+        "status": "Review"
+    },
+    {
+        "id": "todo4",
+        "name": "Task 4",
+        "description": "Description 4",
+        "assignedTo": "Group",
+        "dueDate": "2020-10-05",
+        "status": "Done"
+    },
+    {
+        "id": "todo5",
+        "name": "Task 5",
+        "description": "zzzzzz.... this is example of very long descriptions. and i repeat again this is example of very long descriptions.",
+        "assignedTo": "Guest",
+        "dueDate": "2020-09-18",
+        "status": "Done"
+    }
+]
