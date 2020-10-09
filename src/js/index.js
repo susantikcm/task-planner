@@ -95,6 +95,7 @@ const clearTaskForm = (form) => {
     const element = getTaskFormElement(form);
     if(element) 
     {
+        taskForm.elements['task-id'].value = '';
         element.name.value = '';
         element.description.value = '';
         element.assignedTo.value = '';
@@ -151,6 +152,8 @@ const displayTaskForm = (action, task) => {
             element.classList.remove('is-invalid');
     });
 
+    clearTaskForm(taskForm);
+    
     if(action === 'create')
         taskForm.elements['submit'].value = 'Save';
     else if(action === 'update') {

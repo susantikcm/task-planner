@@ -98,7 +98,7 @@ describe('Task Manager', () => {
                 });
 
                 it('should set value of "currentId" equals to length of tasks array + 1', () => {
-                    expect(taskManager.currentId).toEqual(taskManager.tasks.length+1);
+                    expect(taskManager.currentId).toEqual(taskManager.tasks.length > 0 ? taskManager.tasks[taskManager.tasks.length-1].id + 1 : 1);
                 }); 
             });
         });

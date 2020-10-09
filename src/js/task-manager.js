@@ -95,12 +95,8 @@ let TaskManager = class  {
     getAllTasks = () => {
         this.tasks = JSON.parse(localStorage.getItem('TaskList'));
 
-        if(this.tasks !== null && this.tasks !== undefined ) {
-            if(this.tasks.length > 0)
-                this.currentId = this.tasks[this.tasks.length-1].id + 1;
-            else 
-                this.currentId = 1;
-        }
+        if(this.tasks !== null && this.tasks !== undefined )
+            this.currentId = this.tasks.length > 0 ? this.tasks[this.tasks.length-1].id + 1 : 1;
     }
 
     // function that retrieves only tasks with status that matches the selected status. 
