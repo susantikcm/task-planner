@@ -94,9 +94,12 @@ let TaskManager = class  {
     // function that retrieves all tasks in the Tasks array.
     getAllTasks = () => {
         this.tasks = JSON.parse(localStorage.getItem('TaskList'));
+
         if(this.tasks !== null && this.tasks !== undefined ) {
-            const lastId = this.tasks[this.tasks.length-1].id;
-            this.currentId = lastId > 0 ? lastId + 1 : 1;
+            if(this.tasks.length > 0)
+                this.currentId = this.tasks[this.tasks.length-1].id + 1;
+            else 
+                this.currentId = 1;
         }
     }
 
