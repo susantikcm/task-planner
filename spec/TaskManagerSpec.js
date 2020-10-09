@@ -167,7 +167,7 @@ describe('Task Manager', () => {
                     taskManager.render(tasks);
 
                     expect(ulTaskList.innerHTML).toContain('<li id="1" class="list-group-item list-group-item-action bg-transparent shadow mb-2 mb-md-4">');
-                    expect(ulTaskList.innerHTML).toContain('<div class="card border-info text-info" style="background-color:rgba(91, 192, 222, 0.5)">');
+                    expect(ulTaskList.innerHTML).toContain('<div class="card border-info text-dark" style="background-color:rgba(91, 192, 222, 0.5)">');
                     expect(ulTaskList.innerHTML).toContain('<div class="card-header bg-transparent pt-1 pb-0 py-md-3">');
                     expect(ulTaskList.innerHTML).toContain('<div class="status d-flex justify-content-between py-0">');
                     expect(ulTaskList.innerHTML).toContain('<p class="status">To Do</p>');
@@ -200,7 +200,7 @@ describe('Task Manager', () => {
                     taskManager.render();
 
                     expect(ulTaskList.innerHTML).toContain('<li id="1" class="list-group-item list-group-item-action bg-transparent shadow mb-2 mb-md-4">');
-                    expect(ulTaskList.innerHTML).toContain('<div class="card border-info text-info" style="background-color:rgba(91, 192, 222, 0.5)">');
+                    expect(ulTaskList.innerHTML).toContain('<div class="card border-info text-dark" style="background-color:rgba(91, 192, 222, 0.5)">');
                     expect(ulTaskList.innerHTML).toContain('<div class="card-header bg-transparent pt-1 pb-0 py-md-3">');
                     expect(ulTaskList.innerHTML).toContain('<div class="status d-flex justify-content-between py-0">');
                     expect(ulTaskList.innerHTML).toContain('<p class="status">To Do</p>');
