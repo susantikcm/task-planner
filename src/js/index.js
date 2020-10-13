@@ -327,10 +327,14 @@ if(searchForm) {
     searchForm.addEventListener('submit', event => {
         event.preventDefault();
         
-        const searchInput = searchForm.querySelector('input').value;
+        let searchInput = searchForm.querySelector('input').value;
         const selectedTasks = taskList.searchTask(searchInput);
         taskList.render(selectedTasks);
-        searchInput.value = '';
+
+        if(selectedTasks.length < 1)
+            document.querySelector('#task-list').innerHTML = `<div id="message" class="text-center">No item with ${searchInput} is found.</div>`;
+
+        searchInput = '';
     }, true);
 };
 
@@ -340,18 +344,22 @@ if(searchInput) {
         if(event.keyCode === 13 || event.key === "Enter")
         {
             event.preventDefault();
-            const searchInput = searchForm.querySelector('input').value;
-            const selectedTasks = taskList.searchTask(searchInput);
+
+            const selectedTasks = taskList.searchTask(searchInput.value);
             taskList.render(selectedTasks);
+
+            if(selectedTasks.length < 1)
+                document.querySelector('#task-list').innerHTML = `<div id="message" class="text-center">No item with ${searchInput.value} is found.</div>`;
+    
             searchInput.value = '';
         }
         else if(event.keyCode === 27 || event.key === "Esc") {
             event.preventDefault();
             taskList.render();
-            searchInput.value = '';
         }
     }, true);
 };
+
 
 // #endregion
 

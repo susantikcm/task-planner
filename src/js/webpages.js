@@ -33,7 +33,7 @@ if(rootDiv) {
                 <div id="task-header">
                     <h4>Tasks:</h4>
                     <div class="row justify-content-between my-3">
-                        <form id="form-select-status" class="form-inline col-md-9">
+                        <form id="form-select-status" class="form-inline col col-md-9">
                             <div class="form-group">
                                 <label for="status">Select by Status &nbsp;</label>
                                 <select id="select-status" class="form-control bg-transparent shadow">Select by Status &nbsp;
@@ -45,12 +45,12 @@ if(rootDiv) {
                                     <option>Expired</option>
                                 </select>
                             </div>
-                            <button id="back-button" class="btn btn-sm btn-outline-dark font-weight-bold d-none ml-2">Back</button>
+                            <button id="back-button" class="btn btn-outline-info font-weight-bold d-none ml-2 mt-4 mt-md-auto">Back</button>
                         </form>
                         <button id="add-button" class="btn btn-outline-warning text-info font-weight-bold rounded-pill shadow d-none d-md-block mr-3">New Task</button>
                     </div>
                 </div>
-
+                
                 <ul id="task-list" class="list-group">
                 </ul>
             </section>

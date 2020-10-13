@@ -62,17 +62,22 @@ let TaskManager = class  {
     }
 
     // function that retrieves only tasks with status that matches the selected status. 
-    searchTask = keyword => this.tasks.filter(task => {
-        keyword = keyword.toLowerCase();
+    searchTask = keyword =>
+        this.tasks ?
+            this.tasks.filter(task => {
+                keyword = keyword.toLowerCase();
 
-        if(task.name.toLowerCase().includes(keyword) ||
-            task.description.toLowerCase().includes(keyword) || 
-            task.dueDate.toLowerCase().includes(keyword) || 
-            task.assignedTo.toLowerCase().includes(keyword) || 
-            task.status.toLowerCase().includes(keyword)) {
-                return task;
-        }
-    }); 
+                if(task.name.toLowerCase().includes(keyword) ||
+                    task.description.toLowerCase().includes(keyword) || 
+                    task.dueDate.toLowerCase().includes(keyword) || 
+                    task.assignedTo.toLowerCase().includes(keyword) || 
+                    task.status.toLowerCase().includes(keyword)) {
+                        return task;
+                } 
+                else 
+                    return null;
+            }) 
+            : null;
 
     // functions that add a new task object into the tasks array.   
     addTask = task => {
