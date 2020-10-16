@@ -56,7 +56,7 @@ if(rootDiv) {
             </section>
 
             <section id="create-task" class="col d-none">
-                <h4>Create Task</h4>
+                <h4 id="form-title">Create Task</h4>
                 <form id="task-form" class="mt-3">
                     <input id="task-id" style="display:none;" />
                     <div class="form-group row">

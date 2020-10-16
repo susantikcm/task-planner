@@ -154,9 +154,12 @@ const displayTaskForm = (action, task) => {
 
     clearTaskForm(taskForm);
     
-    if(action === 'create')
+    if(action === 'create') {
+        document.querySelector('#form-title').innerHTML = 'Create Task';
         taskForm.elements['submit'].value = 'Save';
+    }
     else if(action === 'update') {
+        document.querySelector('#form-title').innerHTML = 'Update Task';
         taskForm.elements['submit'].value = 'Update';
  
         taskForm.elements['task-id'].value = task.id;
